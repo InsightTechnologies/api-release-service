@@ -34,9 +34,5 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry combineaccessrules="false" kind="src" path="/api-common-framework"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/api-effort-service"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/api-ordering-service"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/api-story-service"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
