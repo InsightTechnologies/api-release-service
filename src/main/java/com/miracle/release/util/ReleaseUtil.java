@@ -18,16 +18,16 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.client.RestTemplate;
 
-import com.miracle.common.api.bean.APIMicroServiceBean;
+import com.miracle.api.service.bean.FeatureMetadetails;
+import com.miracle.api.service.bean.FeatureStoryDetails;
+import com.miracle.api.service.bean.StoryMetadataBean;
+import com.miracle.api.service.bean.UnorderedFeaturesBean;
+import com.miracle.api.service.utils.RetrieveReleaseFeatureRequest;
 import com.miracle.common.api.bean.Feature;
-import com.miracle.effort.bean.StoryMetadataBean;
-import com.miracle.ordering.bean.UnorderedFeaturesBean;
-import com.miracle.release.bean.FeatureWithEstimates;
-import com.miracle.release.bean.RetrieveReleaseFeatureRequest;
+import com.miracle.common.bean.APIMicroServiceBean;
+import com.miracle.common.bean.FeatureWithEstimates;
 import com.miracle.release.exception.ReleaseErrorCode;
 import com.miracle.release.exception.ReleaseException;
-import com.miracle.story.bean.FeatureMetadetails;
-import com.miracle.story.bean.FeatureStoryDetails;
 
 @Controller
 public class ReleaseUtil {

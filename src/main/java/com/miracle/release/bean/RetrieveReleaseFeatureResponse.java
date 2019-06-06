@@ -2,6 +2,8 @@ package com.miracle.release.bean;
 
 import java.util.List;
 
+import com.miracle.common.bean.FeatureWithEstimates;
+
 public class RetrieveReleaseFeatureResponse {
 	private List<FeatureWithEstimates> releaseFeatures;
 

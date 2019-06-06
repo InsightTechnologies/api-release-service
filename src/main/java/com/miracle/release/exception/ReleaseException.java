@@ -2,9 +2,9 @@ package com.miracle.release.exception;
 
 import org.springframework.http.HttpStatus;
 
-import com.miracle.exception.GatewayServiceException;
+import com.miracle.exception.APIFrameworkException;
 
-public class ReleaseException extends GatewayServiceException {
+public class ReleaseException extends APIFrameworkException {
 
 	/**
 	 * 

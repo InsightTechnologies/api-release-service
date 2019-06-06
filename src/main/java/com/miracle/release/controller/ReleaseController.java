@@ -13,18 +13,18 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.miracle.api.service.bean.FeatureMetadetails;
+import com.miracle.api.service.bean.FeatureStoryDetails;
+import com.miracle.api.service.bean.StoryMetadataBean;
+import com.miracle.api.service.bean.UnorderedFeaturesBean;
+import com.miracle.api.service.utils.RetrieveReleaseFeatureRequest;
 import com.miracle.common.api.bean.Feature;
+import com.miracle.common.bean.FeatureWithEstimates;
 import com.miracle.common.controller.APIMicroService;
-import com.miracle.effort.bean.StoryMetadataBean;
-import com.miracle.exception.GatewayServiceException;
-import com.miracle.ordering.bean.UnorderedFeaturesBean;
-import com.miracle.release.bean.FeatureWithEstimates;
-import com.miracle.release.bean.RetrieveReleaseFeatureRequest;
+import com.miracle.exception.APIFrameworkException;
 import com.miracle.release.exception.ReleaseErrorCode;
 import com.miracle.release.exception.ReleaseException;
 import com.miracle.release.util.ReleaseUtil;
-import com.miracle.story.bean.FeatureMetadetails;
-import com.miracle.story.bean.FeatureStoryDetails;
 
 
 @RestController
@@ -89,7 +89,7 @@ public class ReleaseController extends APIMicroService {
 				catch(ReleaseException releaseException){
 					logger.error("Getting exception in retrieve release features, Exception Description :: "+releaseException.getMessage(),releaseException);
 					throw releaseException;
-				}catch(GatewayServiceException gatewayServiceException){
+				}catch(APIFrameworkException gatewayServiceException){
 					logger.error("Getting exception in retrieve release features, Exception Description :: " +gatewayServiceException.getMessage(),gatewayServiceException);
 					throw gatewayServiceException;
 				}
